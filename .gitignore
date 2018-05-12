@@ -1,5 +1,5 @@
-# Object file
-*.o
+node_modules/*
+.vscode/
 
-# Ada Library Information
-*.ali
+dist/
+build/
