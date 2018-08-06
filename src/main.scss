@@ -1,9 +1,41 @@
+@import '../styles/variables';
+@import '../styles/animations';
+
 body { 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 
   #canvas {
     border: 1px solid black;
+  }
+
+  .css-anim-wrap {
+    width: 100vh;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 0 0 4px 4px #DEDEDE;
+
+    & > div {
+      width: $main-size;
+      height: $main-size;
+      border: solid 1px black;
+      margin: 15px;
+      display: inline-block;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+
+    .rounding-square {
+      animation: rounding 4s ease-in-out infinite reverse;
+    }
+
+    .skewX-square {
+      animation: skewX 2s ease-in infinite alternate;
+    }
   }
 }

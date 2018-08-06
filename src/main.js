@@ -5,14 +5,14 @@ const ctx = canvas.getContext('2d');
 
 const defaultOpt = {
   color: 'black',
-  width: 10,
-  height: 10,
+  width: 2.5,
+  height: 2.5,
   phase: 0,
   yOffset: 75
 }
 
 function drawGraph(x = 1, opt = {}) {
-  const _opt = Object.assign({}, defaultOpt, opt);
+  const _opt = {...defaultOpt, ...opt};
 
   ctx.fillStyle = _opt.color;
   ctx.fillRect(x * 100, (Math.sin(x + _opt.phase)) * 50 + _opt.yOffset, _opt.width, _opt.height);
