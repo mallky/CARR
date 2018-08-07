@@ -7,3 +7,14 @@
   from { transform: skewX(-20deg) }
   to { transform: skewX(20deg) }
 }
+
+@keyframes fromTop {
+  from { top: -100vh; }
+  to { top: 0; }
+}
+
+@keyframes sizeTransform {
+  from { border-radius: 50% }
+  50% { border-radius: 0 }
+  to { border-radius: 50% }
+}

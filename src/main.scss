@@ -22,6 +22,7 @@ body {
       width: $main-size;
       height: $main-size;
       border: solid 1px black;
+      background: black;
       margin: 15px;
       display: inline-block;
 
@@ -36,6 +37,44 @@ body {
 
     .skewX-square {
       animation: skewX 2s ease-in infinite alternate;
+    }
+
+    .from-top-square {
+      position: relative;
+      animation: fromTop 2s cubic-bezier(0.18, 0.36, 0, 1.35) infinite alternate;
+    }
+
+    .spin-circles {
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      border: none;
+      transform-origin: 50% 50%;
+      animation: rounding 4s ease-in-out infinite, sizeTransform 4s ease infinite alternate;
+
+      &::after {
+        display: block;
+        content: '';
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background: black;
+        margin-left: 18px;
+        margin-top: -11px;
+        animation: rounding 6s ease-in-out infinite, sizeTransform 4s ease infinite alternate;
+      }
+
+      &::before {
+        display: block;
+        content: '';
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        background: black;
+        margin-left: 34px;
+        margin-top: 1px;
+        animation: rounding 4s ease-in-out infinite, sizeTransform 4s ease infinite alternate;
+      }
     }
   }
 }
