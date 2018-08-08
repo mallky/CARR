@@ -1,0 +1,28 @@
+#wrapper, #wrapper-delay {
+  position: relative;
+  width: $king-size;
+  height: $king-size;
+  background: transparent;
+  border: none;
+}
+
+.square {
+  position: absolute;
+  display: inline-block;
+  width: $small-size;
+  height: $small-size;
+  border: 1px solid black;
+  margin: 5px;
+  background: black;
+}
+
+.circle {
+  position: absolute;
+  display: inline-block;
+  margin: 5px;
+  width: $small-size;
+  height: $small-size;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: black;
+}

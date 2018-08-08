@@ -1,5 +1,6 @@
 @import '../styles/variables';
 @import '../styles/animations';
+@import '../styles/common';
 
 body { 
   display: flex;
@@ -74,6 +75,36 @@ body {
         margin-left: 34px;
         margin-top: 1px;
         animation: rounding 4s ease-in-out infinite, sizeTransform 4s ease infinite alternate;
+      }
+    }
+
+    #wrapper {
+      .first {
+        animation: from-top-right 4s ease-in infinite;
+      }
+      .second {
+        animation: from-top-left 4s ease-in infinite;
+      }
+      .third {
+        animation: from-bot-left 4s ease-in infinite;
+      }
+      .fouth {
+        animation: from-bot-right 4s ease-in infinite;
+      }
+    }
+
+    #wrapper-delay {
+      .first {
+        animation: from-top-right 4s ease-out infinite;
+      }
+      .second {
+        animation: from-top-right 4s ease-out 1s infinite;
+      }
+      .third {
+        animation: from-top-right 4s ease-out 2s infinite;
+      }
+      .fouth {
+        animation: from-top-right 4s ease-out 3s infinite;
       }
     }
   }
