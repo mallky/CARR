@@ -113,19 +113,19 @@ body {
       div:first-child {
         top: 0;
         left: 40px;
-        animation: fromTop 1s ease, show 1s ease;
+        animation: fromTop 1s ease-out, show 1s ease;
       }
 
       div:nth-child(2) {
         top: 20px;
         left: 35px;
-        animation: fromTop 1s ease 1s, show 2s ease;
+        animation: fromTop 1s ease-in-out 1s, show 2s ease;
       }
 
       div:last-child {
         top: 50px;
         left: 30px;
-        animation: fromTop 1s ease 2s, show 3s ease;
+        animation: fromTop 1s ease-in 2s, show 3s ease;
       }
 
       .small {
