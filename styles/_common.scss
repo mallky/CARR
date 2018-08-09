@@ -1,4 +1,4 @@
-#wrapper, #wrapper-delay {
+#wrapper, #wrapper-delay, .css-anim-wrap > .wrap {
   position: relative;
   width: $king-size;
   height: $king-size;
@@ -25,4 +25,29 @@
   border: 1px solid black;
   border-radius: 50%;
   background: black;
+}
+
+.smaller {
+  width: $smaller-size;
+  height: $smaller-size;
+}
+
+.small {
+  width: $small-size;
+  height: $small-size;
+}
+
+.medium {
+  width: $medium-size;
+  height: $medium-size;
+}
+
+.big {
+  width: $big-size;
+  height: $big-size;
+}
+
+.bg-white {
+  background-color: white;
+  border: 1px solid white;
 }

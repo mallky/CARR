@@ -1,5 +1,6 @@
 @import '../styles/variables';
 @import '../styles/animations';
+@import '../styles/mixins';
 @import '../styles/common';
 
 body { 
@@ -105,6 +106,66 @@ body {
       }
       .fouth {
         animation: from-top-right 4s ease-out 3s infinite;
+      }
+    }
+
+    #snowman {
+      div:first-child {
+        top: 0;
+        left: 40px;
+        animation: fromTop 1s ease, show 1s ease;
+      }
+
+      div:nth-child(2) {
+        top: 20px;
+        left: 35px;
+        animation: fromTop 1s ease 1s, show 2s ease;
+      }
+
+      div:last-child {
+        top: 50px;
+        left: 30px;
+        animation: fromTop 1s ease 2s, show 3s ease;
+      }
+
+      .small {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > div {
+          position: static;
+          height: 3px;
+
+          &:last-child {
+            animation: wink 0.5s ease-in 3s alternate;
+          }
+        }
+      }
+
+      .medium {
+        &::before {
+          content: '';
+          position: relative;
+          top: 50%;
+          left: -70%;
+          transform-origin: 100% 50%;
+          transform: rotate(45deg);
+          animation: hello 1s ease-in-out infinite 3.5s alternate;
+
+          @include line();
+        }
+        &::after {
+          content: '';
+          position: relative;
+          top: 40%;
+          left: 100%;
+          transform-origin: 0% 50%;
+          transform: rotate(-45deg);
+          animation: hello 1s ease-in-out infinite 5s alternate-reverse;
+
+          @include line();
+        }
       }
     }
   }

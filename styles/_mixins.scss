@@ -6,3 +6,10 @@
   animation-timing-function: $timing-function;
   animation-play-state: $play-state;
 }
+
+@mixin line() {
+  display: block;
+  width: $small-size;
+  height: 1px;
+  border: 1px solid black;
+}

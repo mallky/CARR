@@ -13,6 +13,12 @@
   to { top: 0; }
 }
 
+@keyframes show {
+  from { opacity: 0 }
+  70% { opacity: 0 }
+  to { opacity: 1 }
+}
+
 @keyframes sizeTransform {
   from { border-radius: 50% }
   50% { border-radius: 0 }
@@ -49,4 +55,13 @@
   50% {top: 0; left: 100%}
   75% {top: 100%; left: 100%}
   to {top: 100%; left: 0}
+}
+
+@keyframes hello {
+  from { transform: rotate(45deg) }
+  to { transform: rotate(-45deg) }
+}
+
+@keyframes wink {
+  50% { height: 0px }
 }
