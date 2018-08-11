@@ -65,3 +65,10 @@
 @keyframes wink {
   50% { height: 0px }
 }
+
+@keyframes triangles-spinner {
+  25% {@include triangle(black, transparent, transparent, transparent)}
+  50% {@include triangle(transparent, black, transparent, transparent)}
+  75% {@include triangle(transparent, transparent, black, transparent)}
+  100% {@include triangle(transparent, transparent, transparent, black)}
+}

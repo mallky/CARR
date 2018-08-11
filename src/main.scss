@@ -1,6 +1,6 @@
 @import '../styles/variables';
-@import '../styles/animations';
 @import '../styles/mixins';
+@import '../styles/animations';
 @import '../styles/common';
 
 body { 
@@ -167,6 +167,15 @@ body {
           @include line();
         }
       }
+    }
+
+    .triangles-spinner {
+      width: 0;
+      height: 0;
+      background: transparent;
+      border: 25px solid transparent;
+      border-bottom: 25px solid black;
+      animation: triangles-spinner 4s ease-out infinite;
     }
   }
 }
