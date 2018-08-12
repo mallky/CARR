@@ -72,3 +72,8 @@
   75% {@include triangle(transparent, transparent, black, transparent)}
   100% {@include triangle(transparent, transparent, transparent, black)}
 }
+
+@keyframes change-scale {
+  from { transform: scale(1 1) }
+  to { transform: scale(1.25 1.25) }
+}

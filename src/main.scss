@@ -177,5 +177,41 @@ body {
       border-bottom: 25px solid black;
       animation: triangles-spinner 4s ease-out infinite;
     }
+
+    .heart-beat-wrap {
+      transform: rotate(135deg);
+
+      .heart-beat {
+        width: $main-size;
+        height: $main-size;
+        background-color: black;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        animation: change-scale 1s cubic-bezier(0.85, 0.33, 0.27, 1.07) infinite alternate;
+
+        &::before {
+          content: '';
+          display: block;
+          width: $main-size;
+          height: $main-size;
+          border-radius: 50%;
+          position: relative;
+          left: -50%;
+          background-color: black;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          width: $main-size;
+          height: $main-size;
+          border-radius: 50%;
+          position: relative;
+          top: -50%;
+          background-color: black;
+        }
+      }
+    }
   }
 }
